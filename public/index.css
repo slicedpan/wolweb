@@ -1,0 +1,74 @@
+.machine-container {
+  height: 100px;
+  background-color: slategray;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+}
+
+.machine-title {
+  height: 58px;
+  width: 200px;
+  font-size: 26px;
+  text-align: right;
+  padding-top: 32px;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.machine-controls {
+  height: 90px;
+  margin-left: 5px;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+  padding-left: 20px;
+}
+
+.wakeup-button {
+  background-color: green;
+  color: white;
+  display: flex;
+  width: 200px;
+  height: 100px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.service-status {
+  width: 50px;
+  margin-top: 25px;
+  margin-left: 20px;
+  height: 50px;
+  display: flex;
+}
+
+.service-steam {
+  background: url("steam-logo-tiny.png"), transparent;
+  background-size: cover;
+}
+
+.service-status.service-down {
+  filter: grayscale(100%);
+}

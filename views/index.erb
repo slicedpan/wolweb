@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>WolWeb</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css"></link>
+  </head>
+  <body>
+    <% machine_store.machines.each.with_index do |machine, id| %>
+      <div class="machine-container" machine-id="<%= id %>">
+        <div class="machine-title">
+          <span><%= machine.name %></span>
+        </div>  
+        <div class="machine-controls">
+          <button class="wakeup-button">Wake</button>
+          <% machine.service_statuses.each do |service, up| %>
+            <% classes = ["service-status", "service-#{service}", up ? "service-up" : "service-down"] %>
+            <div class="<%= classes.join(" ") %>"></div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
