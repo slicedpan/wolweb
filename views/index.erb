@@ -21,7 +21,7 @@
               <div class="status-badge"></div>
             </div>
           <% end %>
-          <button class="wakeup-button" disabled=<%= (machine.service_statuses.values.any?).to_s %>><span>Wake</span></button>
+          <button class="wakeup-button" <%= "disabled" if machine.service_statuses.values.any? %>><span>Wake</span></button>
         </div>
       </div>
     <% end %>
